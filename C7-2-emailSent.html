@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap"
       rel="stylesheet"
     />
-    <title>YARDSale</title>
+    <title>Email sent</title>
     <style>
       :root {
         --white: #ffffff;
@@ -22,73 +22,67 @@
         --md: 16px;
         --lg: 18px;
       }
-
       body {
-        font-family: "Quicksand", sans-serif;
         margin: 0;
+        font-family: "Quicksand", sans-serif;
       }
-
       .login {
         width: 100%;
         height: 100vh;
         display: grid;
         place-items: center;
       }
-
       .form-container {
         display: grid;
         grid-template-rows: auto 1fr auto;
         width: 300px;
+        justify-items: center;
       }
-
       .logo {
         width: 150px;
-        margin-bottom: 50px;
+        margin-bottom: 48px;
         justify-self: center;
-        display: block;
+        display: none;
       }
-
-      @media (max-width: 640px) {
-        .logo {
-          display: block;
-        }
-      }
-
       .title {
         font-size: var(--lg);
-        margin-top: 0px;
         margin-bottom: 12px;
         text-align: center;
       }
-
       .subtitle {
-        font-size: var(--md);
         color: var(--very-light-pink);
+        font-size: var(--md);
         font-weight: 300;
         margin-top: 0;
-        margin-bottom: 25px;
+        margin-bottom: 32px;
         text-align: center;
       }
-
-      .email {
-        margin: auto;
-        width: 130px;
-        height: 130px;
-        background-color: var(--text-input-field);
+      .email-image {
+        width: 132px;
+        height: 132px;
         border-radius: 50%;
+        background-color: var(--text-input-field);
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-bottom: 24px;
       }
-
-      .email img {
+      .email-image img {
         width: 80px;
-        height: 80px;
       }
-
+      .resend {
+        font-size: var(--sm);
+      }
+      .resend span {
+        color: var(--very-light-pink);
+      }
+      .resend a {
+        color: var(--hospital-green);
+        text-decoration: none;
+      }
       .primary-button {
         background-color: var(--hospital-green);
-        border-radius: 11px;
+        border-radius: 8px;
         border: none;
         color: var(--white);
         width: 100%;
@@ -97,24 +91,14 @@
         font-weight: bold;
         height: 50px;
       }
-
       .login-button {
-        margin-top: 30px;
+        margin-top: 14px;
+        margin-bottom: 30px;
       }
-
-      .resend {
-        font-size: var(--sm);
-        color: var(--very-light-pink);
-        font-weight: 500;
-        margin-top: 30px;
-        text-align: center;
-      }
-
-      a {
-        color: var(--hospital-green);
-        font-size: var(--sm);
-        font-weight: 500;
-        text-decoration: none;
+      @media (max-width: 640px) {
+        .logo {
+          display: block;
+        }
       }
     </style>
   </head>
@@ -128,22 +112,20 @@
         />
 
         <h1 class="title">Email has been sent!</h1>
-
         <p class="subtitle">
           Please check your inbox for instructions on how to reset the password
         </p>
 
-        <div class="email">
-          <img src="./YardSale_Icons/email.svg" alt="emailIcon" />
+        <div class="email-image">
+          <img src="./YardSale_Icons/email.svg" alt="email" />
         </div>
 
-        <input
-          type="submit"
-          value="Login"
-          class="primary-button login-button"
-        />
+        <button class="primary-button login-button">Login</button>
 
-        <p class="resend">Didn't receive the email?<a href="/"> Resend</a></p>
+        <p class="resend">
+          <span>Didn't receive the email?</span>
+          <a href="/">Resend</a>
+        </p>
       </div>
     </div>
   </body>
