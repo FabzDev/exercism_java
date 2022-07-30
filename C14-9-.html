@@ -11,7 +11,7 @@
   <title>YARDSale</title>
   <style>
     :root {
-      --card-size: 240px;
+      --cartd-size: 240px;
       --white: #ffffff;
       --black: #000000;
       --very-light-pink: #c7c7c7;
@@ -26,50 +26,142 @@
       font-family: "Quicksand", sans-serif;
       margin: 0;
     }
+
+    .my-order {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      place-items: center;
+    }
+
+    .my-order-container {
+      display: grid;
+      /* flex-direction: column; */
+    }
+
+    .title {
+      font-size: var(--lg);
+      margin-bottom: 40px;
+    }
+
+    .my-order-content {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      width: 300px;
+      /* gap: 20px; */
+    }
+
+    .order {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: center;
+      background-color: var(--text-input-field);
+      margin-bottom: 24px;
+      border-radius: 8px;
+      padding: 0 24px;
+    }
+
+    .order p:nth-child(1) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .order p span:nth-child(1) {
+      font-size: var(--md);
+      font-weight: bold;
+    }
+
+    .order p span:nth-child(2) {
+      font-size: var(--sm);
+      color: var(--very-light-pink);
+    }
+
+    .order p:nth-child(2) {
+      text-align: end;
+      font-weight: bold;
+    }
+
+    .shopping-cart {
+      display: grid;
+      grid-template-columns: auto 1fr auto auto;
+      gap: 16px;
+      margin-bottom: 24px;
+      align-items: center;
+    }
+
+    .shopping-cart figure {
+      margin: 0;
+    }
+
+    .shopping-cart figure img {
+      width: 70px;
+      height: 70px;
+      border-radius: 20px;
+      object-fit: cover;
+    }
+
+    .shopping-cart p:nth-child(2) {
+      font-size: var(--sm);
+      color: var(--very-light-pink);
+    }
+
+    .shopping-cart p:nth-child(3) {
+      font-size: var(--md);
+      color: var(--black);
+      font-weight: bold;
+    }
   </style>
 </head>
 
 <body>
   <div class="my-order">
-    <div class="my order-container">
+    <div class="my-order-container">
+      <h1 class="title">My order</h1>
       <div class="my-order-content">
-        <p>
-          <span>04.25.21</span>
-          <span>6 articles</span>
-        </p>
-        <p>$560,00</p>
+        <div class="order">
+          <p>
+            <span>04.25.2021</span>
+            <span>6 articles</span>
+          </p>
+          <p>
+            $560,00
+          </p>
+        </div>
+
+        <div class="shopping-cart">
+          <figure>
+            <img
+              src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="bike">
+          </figure>
+          <p>Bike</p>
+          <p>$30,00</p>
+        </div>
+
+        <div class="shopping-cart">
+          <figure>
+            <img
+              src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="bike">
+          </figure>
+          <p>Bike</p>
+          <p>$30,00</p>
+        </div>
+
+        <div class="shopping-cart">
+          <figure>
+            <img
+              src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="bike">
+          </figure>
+          <p>Bike</p>
+          <p>$30,00</p>
+        </div>
       </div>
+
     </div>
 
-    <div class="shopping-cart">
-      <figure>
-        <img
-          src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          alt="bike">
-      </figure>
-      <p>Bike</p>
-      <p>$30,00</p>
-    </div>
-
-    <div class="shopping-cart">
-      <figure>
-        <img
-          src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          alt="bike">
-      </figure>
-      <p>Bike</p>
-      <p>$30,00</p>
-    </div>
-
-    <div class="shopping-cart">
-      <figure>
-        <img
-          src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          alt="bike">
-      </figure>
-      <p>Bike</p>
-      <p>$30,00</p>
-    </div>
   </div>
 </body>
 
