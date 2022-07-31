@@ -76,8 +76,8 @@
       }
       .amount {
         position: relative;
-        bottom: 7px;
-        right: 10px;
+        bottom: 3px;
+        right: 12px;
         font-size: var(--sm);
         font-weight: bold;
       }
@@ -86,15 +86,18 @@
         font-size: var(--lg);
         font-weight: bold;
       }
+      .cart {
+        width: 40px;
+      }
       @media (max-width: 640px) {
         .menu {
           display: flex;
           margin-right: 30px;
         }
-        .navbar p {
+        .left-elements img {
           display: block;
         }
-        .left-elements {
+        .left-elements ul {
           display: none;
         }
         .right-elements ul li:nth-child(1) {
@@ -107,7 +110,6 @@
     <div class="main-container">
       <div class="navbar">
         <img src="./YardSale_Icons/icon_menu.svg" alt="menu" class="menu" />
-        <p class="title">My order</p>
         <div class="left-elements">
           <img
             src="./YardSale_Logos/logo_yard_sale.svg"
@@ -130,6 +132,7 @@
               <img
                 src="./YardSale_Icons/icon_shopping_cart_notification.svg"
                 alt="cart"
+                class="cart"
               />
               <div class="amount">2</div>
             </li>
