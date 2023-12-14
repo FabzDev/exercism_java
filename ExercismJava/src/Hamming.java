@@ -12,7 +12,6 @@ public class Hamming {
         if (leftStrand.length() != rightStrand.length()) {
             throw new IllegalArgumentException("strands must be of equal length");
         }
-
     }
 
     public int getHammingDistance() {
