@@ -28,7 +28,6 @@ class ScrabbleV2 {
 
     public int getScore(){
         return word.chars().reduce(0, (score, letterCode) -> score + lookup.get(letterCode));
-//        IntStream.range(0,word.length()).forEach(iWord -> word.chars().reduce(0, (score, letterCode) -> score + lookup.get(letterCode)));
     }
 
     public static void main(String[] args) {
