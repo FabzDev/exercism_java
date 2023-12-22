@@ -1,4 +1,4 @@
-package edu.fabzdev.exercism.logsExcercise;
+package logsExcercise;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -6,17 +6,17 @@ import java.util.regex.Pattern;
 public class LogLineV2 {
     Pattern pattern = Pattern.compile("\\[([A-Z]{3})]:\s(.*)$");
     Matcher matcher;
-    LogLevelV2 logLevelV2;
+    edu.fabzdev.exercism.logsExcercise.LogLevelV2 logLevelV2;
     String message;
 
     public LogLineV2(String logLine) {
         matcher = pattern.matcher(logLine);
         matcher.matches();
-        logLevelV2 = LogLevelV2.getLogLevelFrom(matcher.group(1));
+        logLevelV2 = edu.fabzdev.exercism.logsExcercise.LogLevelV2.getLogLevelFrom(matcher.group(1));
         message = matcher.group(2);
     }
 
-    public LogLevelV2 getLogLevel() {
+    public edu.fabzdev.exercism.logsExcercise.LogLevelV2 getLogLevel() {
         return logLevelV2;
     }
 
