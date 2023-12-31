@@ -6,7 +6,7 @@ public class Triangle2 {
     private double c;
 
     public Triangle2(double a, double b, double c) throws TriangleException {
-        if(!(a>0 && b>0 && c>0 && a+b>=c && b+c>=a && a+c>=b))
+        if (!(a > 0 && b > 0 && c > 0 && a + b >= c && b + c >= a && a + c >= b))
             throw new TriangleException();
 
         this.a = a;
@@ -15,7 +15,7 @@ public class Triangle2 {
     }
 
     public boolean isEquilateral() {
-        return a==b && a==c;
+        return a == b && a == c;
     }
 
     public boolean isIsosceles() {
@@ -24,16 +24,17 @@ public class Triangle2 {
     }
 
     public boolean isScalene() {
-        return a!=b && a!=c && b!=c;
+        return a != b && a != c && b != c;
     }
 
     public static void main(String[] args) {
         Triangle2 t = null;
         try {
-            t = new Triangle2(0.5,0.5,0.5);
+            t = new Triangle2(0.5, 0.5, 0.5);
         } catch (TriangleException e) {
             throw new RuntimeException(e);
         }
         t.isEquilateral();
     }
+    git 
 }
