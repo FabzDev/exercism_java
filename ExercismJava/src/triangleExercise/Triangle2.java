@@ -36,5 +36,4 @@ public class Triangle2 {
         }
         t.isEquilateral();
     }
-    git 
 }
