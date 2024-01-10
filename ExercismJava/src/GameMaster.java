@@ -77,13 +77,14 @@ public class GameMaster {
     }
 
     public String describe(TravelMethod tm){
-        return String.format("You're traveling to your destination %s.", tm.getAbrev());
+        String travel = tm == TravelMethod.WALKING?"by walking.": "on horseback.";
+        return String.format("You're traveling to your destination %s", travel);
     }
 
     public String describe(Character character, Destination dest, TravelMethod tm){
-        return String.format("%s You're traveling to your destination %s. You've arrived at %s, which has %d inhabitants.",
+        return String.format("%s %s You've arrived at %s, which has %d inhabitants.",
                 describe(character),
-                tm.getAbrev(),
+                describe(tm),
                 dest.getName(), dest.getInhabitants()
         );
     }
